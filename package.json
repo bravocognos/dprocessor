@@ -1,0 +1,49 @@
+{
+  "name": "dprocessor",
+  "version": "0.0.1",
+  "description": "Process MySQL data via streams",
+  "author": "Thales Pinheiro <thalesfsp@gmail.com>",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "thalesfsp",
+      "email": "thalesfsp@gmail.com"
+    }
+  ],
+  "maintainers": [
+    "thalesfsp <thalesfsp@gmail.com>"
+  ],
+  "homepage": "https://github.com/bravocognos/dprocessor#readme",
+  "bugs": {
+    "url": "https://github.com/bravocognos/dprocessor/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bravocognos/dprocessor.git"
+  },
+  "keywords": [
+    "data",
+    "stream",
+    "pipe",
+    "etl",
+    "transform"
+  ],
+  "main": "index.js",
+  "preferGlobal": true,
+  "bin": {
+    "dprocessor": "./bin/dprocessor"
+  },
+  "engines": {
+    "node": ">= 12.0.0"
+  },
+  "dependencies": {
+    "commander": "^3.0.2",
+    "moment": "^2.24.0",
+    "mysql": "^2.17.1",
+    "progress": "^2.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

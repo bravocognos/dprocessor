@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+
+const program = require('commander');
+
+// Setup CLI
+program
+  .version(require('../package.json').version)
+  .description(`It process MySQL data via streams.
+  
+About data processors:
+  
+- It process incoming data from the pipe
+  - After data manipulation, it should **always** push data, resume the pipe, and call 'next();'
+- Every processor should handle its own errors
+- Every processor should be plugable, modular, and contained in itself/isolated`)
+  .usage('start')
+  .parse(process.argv);
+
+ // Output the help if there's no "TEXT", also breaks the process
+ if (!program.args.length) {
+  program.help();
+  process.exit(1);
+}
+
+
+// Output the hash
+if (program.args.includes('start')) {
+  require('../index')();
+}
